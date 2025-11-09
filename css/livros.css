@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f9;
+}
+
+h1 {
+    color: #2919b8;
+    text-align: center;
+}
+
+.controls {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#filtroBusca {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#tabelaLivros {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+#tabelaLivros thead th {
+    background-color: #273791;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    cursor: pointer; 
+    position: relative;
+}
+
+#tabelaLivros tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tabelaLivros tbody tr:hover {
+    background-color: #ddd;
+}
+
+#tabelaLivros td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+}
+
+
+.sort-icon {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+
+.asc .sort-icon::after {
+    content: " ▲";
+}
+
+
+.desc .sort-icon::after {
+    content: " ▼";
+}
+
+
+#tabelaLivros thead th:not(.asc):not(.desc) .sort-icon::after {
+    content: " ▽"; 
+    opacity: 0.5;
+}

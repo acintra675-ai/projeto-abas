@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #8a918a; 
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    border: 1px solid #cceeff; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: none; 
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #686868; 
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+    background-color: #bebfc077; 
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #3b8fc7; 
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-group input[type="text"],
+.form-group select,
+.form-group textarea {
+    width: calc(100% - 20px); 
+    padding: 8px 10px;
+    border: 1px solid #add8e6; 
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #fff; 
+    color: #555;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+}
+
+.calendar-icon {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; 
+    color: #666;
+    font-size: 18px;
+}
+
+
+.form-group input[type="text"][placeholder*="dd/mm/aaaa"] + .calendar-icon {
+    top: 65%; 
+}
+
+
+.full-width {
+    grid-column: span 2; 
+}
+
+.btn-enviar {
+    display: block;
+    width: 150px;
+    padding: 12px 20px;
+    background-color: #0f800f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 30px auto 0; 
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #035c0a;
+}

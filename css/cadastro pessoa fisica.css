@@ -1,0 +1,155 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.container {
+    background-color: #83ca1060;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: none;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #205f1a;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.tabs {
+    display: flex;
+    background-color: #e9ecef;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.tabs button {
+    background-color: #e9ecef;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #566779;
+    transition: background-color 0.3s ease;
+    border-right: 1px solid #dee2e6;
+}
+
+.tabs button:hover {
+    background-color: #dee2e6;
+}
+
+.tabs button.active {
+    background-color: #fff;
+    color: #2c3b03;
+    border-bottom: 2px solid #5e9107;
+}
+
+.content {
+    padding: 20px;
+    
+    text-align: center;
+}
+
+.form-section {
+    margin-bottom: 30px;
+    text-align: left; 
+}
+
+.form-section h3 {
+    color: #343a40;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 10px;
+}
+
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    gap: 20px;
+}
+
+.form-field {
+    flex: 1 1 auto; 
+    min-width: 150px; 
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-field label {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-bottom: 5px;
+}
+
+.form-field input[type="text"],
+.form-field input[type="date"],
+.form-field select {
+    padding: 8px 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.form-field input[type="text"]:focus,
+.form-field input[type="date"]:focus,
+.form-field select:focus {
+    border-color: #007bff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+
+.botao-cadastrar {
+    background-color: #2f4d08; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 6px rgba(80, 153, 19, 0.3); 
+    margin-top: 20px; 
+}
+
+.botao-cadastrar:hover {
+    background-color: #49a50c; 
+    box-shadow: 0 6px 8px rgba(110, 184, 13, 0.4);
+}
+
+.botao-cadastrar:active {
+    background-color: #479612; 
+    transform: translateY(1px); 
+    box-shadow: 0 2px 4px rgba(29, 61, 3, 0.4);
+}
+
+
+@media (max-width: 768px) {
+    .form-field {
+        flex-basis: calc(50% - 10px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .form-field {
+        flex-basis: 100%; 
+    }
+}

@@ -1,0 +1,426 @@
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+header {
+    background: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-h9 { font-size: 28px; font-weight: bold; color: #4a00e0; }
+.logo-h15 { font-size: 16px; color: #4a00e0; margin-left: 5px; }
+
+header nav a {
+    margin-left: 10px;
+    padding: 10px 14px;
+    border: 1px solid #4a00e0;
+    text-decoration: none;
+    border-radius: 18px;
+    color: #4a00e0;
+    font-weight: bold;
+    display: inline-block; 
+}
+
+header nav .destaque {
+    background: #4a00e0;
+    color: #fff;
+    border-color: #4a00e0; 
+}
+
+
+.busca-categorias {
+    padding: 20px;
+}
+
+.busca-input {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap; 
+}
+
+.busca-input input, .busca-input button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex-grow: 1; 
+    max-width: 300px;
+}
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; 
+}
+
+.categorias button {
+    padding: 10px 15px;
+    border: 1px solid #4a00e0;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap; 
+}
+
+
+.anuncios {
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px;
+    padding: 20px;
+}
+
+.anuncios h2 {
+    grid-column: 1 / -1; 
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.card-img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.card .preco {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4a00e0;
+    margin: 5px 0;
+}
+
+
+.feature-section {
+    background: #fff;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.feature-section summary {
+    display: block;
+    padding: 20px;
+    cursor: pointer;
+    outline: none;
+    background: #e9e4f5; 
+    border-radius: 10px 10px 0 0;
+}
+
+.feature-section summary h3 {
+    margin: 0;
+    color: #4a00e0;
+}
+
+.feature-section > div {
+    padding: 20px;
+   
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+
+.login-box {
+    max-width: 400px;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+.login-box form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.login-box form button {
+    width: 100%;
+    padding: 12px;
+    background: #4a00e0;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0 20px;
+}
+
+.social button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #4a00e0;
+}
+
+
+.anunciar-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.anunciar-form form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.anunciar-form form input[type="text"],
+.anunciar-form form input[type="number"],
+.anunciar-form form textarea,
+.anunciar-form form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.anunciar-form form button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #00b050; 
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+
+.pagina-anuncio {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+.galeria {
+    flex: 3;
+    min-width: 300px; 
+}
+
+.galeria-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.miniaturas {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    overflow-x: auto; 
+    padding-bottom: 5px;
+}
+
+
+.miniatura-img {
+    width: 70px; 
+    height: 70px; 
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    flex-shrink: 0; 
+}
+
+.miniatura-img:hover {
+    opacity: 1;
+    border: 2px solid #4a00e0;
+}
+
+.detalhes-container {
+    flex: 1;
+    min-width: 250px; 
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #472596;
+    align-self: flex-start; 
+}
+
+.detalhes-container h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.detalhes-container .preco {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a00e0;
+    margin: 10px 0 15px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+.btn-success {
+    background: #00b050;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.detalhes-especificos, .descricao-anuncio {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.descricao-anuncio ul {
+    list-style: none;
+    padding: 0;
+}
+
+.descricao-anuncio ul li {
+    margin-bottom: 5px;
+}
+
+
+footer {
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+footer a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #4a00e0;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    
+    
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .nav-actions {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    header nav a {
+        margin: 0;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+   
+    .busca-input {
+        flex-direction: column;
+    }
+
+    .busca-input input, .busca-input button {
+        max-width: 100%;
+    }
+    
+    .categorias {
+        justify-content: flex-start;
+        overflow-x: scroll; 
+        padding-bottom: 10px;
+    }
+
+    
+    .pagina-anuncio {
+        flex-direction: column; 
+    }
+    
+    .galeria, .detalhes-container {
+        min-width: 100%;
+    }
+    
+    .miniaturas {
+        justify-content: flex-start;
+    }
+    
+}
+
+
+@media (max-width: 480px) {
+    
+    .logo-h9 { font-size: 24px; }
+    .logo-h15 { font-size: 14px; }
+    
+    .anuncios {
+        padding: 10px;
+        grid-template-columns: 1fr; 
+    }
+}

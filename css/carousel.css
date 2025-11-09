@@ -1,0 +1,103 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+
+.carousel-container {
+    width: 100%; 
+    max-width: none; 
+    overflow: hidden; 
+    position: relative;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: white;
+}
+
+
+.carousel-track {
+    display: flex;
+    width: 100%; 
+    transition: transform 0.6s ease-in-out; 
+}
+
+
+.carousel-slide {
+    min-width: 100%; 
+    flex-shrink: 0; 
+}
+
+.carousel-slide img {
+    width: 100%;
+   
+    max-height: 500px; 
+    object-fit: contain; 
+    display: block;
+    border-radius: 8px; 
+}
+
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4); 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    line-height: 1; 
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.carousel-nav:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-nav.prev {
+    left: 10px;
+}
+
+.carousel-nav.next {
+    right: 10px;
+}
+
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.indicator {
+    height: 10px;
+    width: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.indicator.active {
+    background-color: #ffffff;
+    border: 1px solid #000;
+}
